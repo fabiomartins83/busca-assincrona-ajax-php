@@ -4,41 +4,77 @@
 -->
 <html lang="pt-br" dir="ltr">
 
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="Teste AJAX PHP" />
-	<meta name="author" content="Fábio de Almeida Martins" />
-	<meta name="copyright" content="© 2020  -  Fábio de Almeida Martins" />
-	<meta name="reply-to" content="fabio.martins.01@hotmail.com">
-	<meta name="keywords" content="ajax, php" />
-	<meta name="rating" content="general" />
-	<meta name="robots" content="noindex,nofollow" />
-	<meta name="googlebots" content="noindex,nofollow" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!--	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
-    <link rel="stylesheet" href="./css/style-light.css">
-	<title>Name Finder by Fábio Martins</title>
-	<script language="Javascript" type="text/javascript" src="./js/xmlhttprequest.js"></script>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="content-language" content="pt-br, en-us"> <!-- verificar se não está obsoleto -->
+		<meta name="description" content="Teste AJAX PHP" />
+		<meta name="author" content="Fábio de Almeida Martins" />
+		<meta name="copyright" content="© 2020  -  Fábio de Almeida Martins" />
+		<meta name="reply-to" content="fabio.martins.01@hotmail.com">
+		<meta name="keywords" content="ajax, php" />
+		<meta name="rating" content="general" />
+		<meta name="robots" content="noindex,nofollow" />
+		<meta name="googlebots" content="noindex,nofollow" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link type="image/x-icon" rel="shortcut icon" href="./img/favicon.ico">
+		<link type="application/rss+xml" rel="alternative" title="" href="./feed.rss">
+		<title>Name Finder by Fábio Martins</title>
+		<link type="text/css" rel="stylesheet" href="./css/style-dark.css">
+		<link type="text/css" rel="stylesheet" id="css-light" href="" data-href="./css/style-light.css">
+		<script language="Javascript" type="text/javascript" src="./js/xmlhttprequest.js"></script>
+		<script language="Javascript" type="text/javascript" src="./js/scripts.js"></script>
+	</head>
 
-<body>
-    <!-- <h1 class="titulo">Name Finder</h1> -->
-	<br>
-	<h2>Buscar pelo nome</h2>
-	<br>
-	<div class="corpodetexto central">
-		<p>Insira o seu nome na caixa de texto abaixo. </p>
-		<p>Nome(s) sugerido(s): <span id="sugestao"></span></p>
-		<br>
-		<form id="formnome"><input type="text" placeholder="Insira seu nome" onkeyup="exibeSugestao(this.value)"></form>
-	<br>
-	</div>
-	<br>
-	<!--
-	<button id="botaoadicionar">Adicionar</button> 
-	<br><br><br>
-    <ul id="nomes"></ul>
-	-->
-    <footer class="rodape"><br>Desenvolvido por <strong>Fábio de Almeida Martins</strong>. <br>© 2020  -  Fábio de Almeida Martins</footer>
-</body>
+	<body>
+		<!--
+		<button id="botaoadicionar">Adicionar</button> 
+		<br><br><br>
+		<ul id="nomes"></ul>
+		-->
+		<footer class="rodape"><br>Desenvolvido por <strong>Fábio de Almeida Martins</strong>. <br>© 2020  -  Fábio de Almeida Martins</footer>
+	</body>
+	
+	<body id="body"> 	<!-- 	<body id="body" onload="MIDIjs.play('./audio/Bach-PreludeInCMajor-BWV846.mid');"> -->
+		<script type="text/javascript" src="./js/scripts-body.js"></script>
+		<div id="div-conteudo">
+			<header id="header" class="cabecalho">
+			</header>
+			<main id="principal">
+				<!-- <h1 class="titulo">Name Finder</h1> -->
+				<br>
+				<h2>Buscar pelo nome</h2>
+				<br>
+				<section id="secaoprincipal">
+					<div class="corpodetexto central">
+						<p>Insira o seu nome na caixa de texto abaixo. </p>
+						<p>Nome(s) sugerido(s): <span id="sugestao"></span></p>
+						<br>
+						<form id="formnome"><input type="text" placeholder="Insira seu nome" onkeyup="exibeSugestao(this.value)"></form>
+						<br>
+					</div>
+					<br>
+				</section>
+			</main>
+			<br>
+			<section id="menuinferior-container" class="container-fit">
+				<div id="menuinferior-box" class="box-fit menu-links" style="">
+					<h6>Menu principal</h6>
+					<nav id="navmenuprincipal" class="links">
+						<a href="javascript:void(0)" id="mudaEstilo">Alterar estilo</a><br>
+						<!-- <a href="javascript:void(0)" id="paraMusica" onclick="MIDIjs.stop();">Parar música</a><br> -->
+						<a href="#topo">Ir ao topo da página</a><br>
+						<a href="./home.html">Voltar para a Página Inicial</a><br>
+					</nav>
+				</div>
+			</section>
+			<footer id="rodape" class="rodape">
+				<div id="divrodape" class="divrodape">
+					<p><small>Desenvolvido por <b>Fábio de Almeida Martins</b><br>© 2021 - Fábio de Almeida Martins</small>
+					</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+	
 </html>
